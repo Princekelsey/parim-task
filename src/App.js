@@ -1,24 +1,21 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import "./App.scss";
+import HomePage from "./pages/HomePage";
+import { getAllEvents } from "./redux/events/eventsActions";
+import moment from "moment";
 
 function App() {
+  const dispatch = useDispatch();
+  const fetchEvents = (request) => dispatch(getAllEvents(request));
+  useEffect(() => {
+    fetchEvents({ startDate: "2020-06-01", endDate: "2020-06-30" });
+    // eslint-disable-next-line
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <HomePage />
     </div>
   );
 }
