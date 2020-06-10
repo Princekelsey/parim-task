@@ -1,6 +1,6 @@
 import eventsActionTypes from "./eventsActionTypes";
 
-const initialState = {
+export const initialState = {
   pending: false,
   events: [],
   error: null,
