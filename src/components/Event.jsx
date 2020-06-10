@@ -9,7 +9,7 @@ const Event = ({ date, event }) => {
       <div className="feature-box">
         <FaCalendarAlt className="feature-box__icon" />
         <h2>{day}</h2>
-        <h3 className="heading-tertiary mb-sm"> {date}</h3>
+        <h3 className="heading-tertiary mb-md"> {date}</h3>
         {event.length ? (
           <>
             <h4>Event(s)</h4>
@@ -17,7 +17,8 @@ const Event = ({ date, event }) => {
               <ul key={index}>
                 <li className="mb-sm">
                   <strong>Type: </strong>
-                  {e.type} <br></br> <strong>Name: </strong>
+                  {e.type} <br></br>
+                  <strong>Name: </strong>
                   {e.name}
                 </li>
               </ul>
