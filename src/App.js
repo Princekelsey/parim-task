@@ -3,13 +3,12 @@ import { useDispatch } from "react-redux";
 import "./App.scss";
 import HomePage from "./pages/HomePage";
 import { getAllEvents } from "./redux/events/eventsActions";
-import moment from "moment";
 
 function App() {
   const dispatch = useDispatch();
-  const fetchEvents = (request) => dispatch(getAllEvents(request));
+  const fetchEvents = () => dispatch(getAllEvents());
   useEffect(() => {
-    fetchEvents({ startDate: "2020-06-01", endDate: "2020-06-30" });
+    fetchEvents();
     // eslint-disable-next-line
   }, []);
 

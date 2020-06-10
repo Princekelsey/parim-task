@@ -13,7 +13,7 @@
   }
 
   &__icon {
-    font-size: 6rem;
+    font-size: 4rem;
     margin-bottom: 0.5rem;
     display: inline-block;
     background-image: linear-gradient(
@@ -22,7 +22,7 @@
       $color-primary-dark
     );
     -webkit-background-clip: text;
-    color: transparent;
+    color: $color-primary-dark;
 
     @include respond(tab-port) {
       margin-bottom: 0;

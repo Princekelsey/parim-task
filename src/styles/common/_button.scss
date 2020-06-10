@@ -4,7 +4,7 @@
   &:visited {
     text-transform: uppercase;
     text-decoration: none;
-    padding: 1.5rem 4rem;
+    padding: 0.9rem 2rem;
     display: inline-block;
     border-radius: 10rem;
     position: relative;
@@ -72,20 +72,22 @@
   &,
   &:link,
   &:visited {
-    color: $color-primary;
+    color: $text-white;
     font-size: $primary-font-size;
     display: inline-block;
+    background-color: $color-secondary-dark;
     text-decoration: none;
+    //border-radius: 3rem;
     border-bottom: 0.1rem solid $color-primary;
-    padding: 0.3rem;
+    padding: 0.5rem 1rem;
     transition: all 0.2s;
     border: none;
     cursor: pointer;
   }
 
   &:hover {
-    background-color: $color-primary;
-    color: $text-white;
+    background-color: $text-white;
+    color: $color-secondary-dark;
     box-shadow: 0 1rem 2rem rgba($color: $color-black, $alpha: 0.15);
     transform: translateY(-0.2rem);
   }

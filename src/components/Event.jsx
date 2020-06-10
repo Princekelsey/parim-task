@@ -1,24 +1,31 @@
 import React from "react";
 import moment from "moment";
+import { FaCalendarAlt } from "react-icons/fa";
 
-const Event = ({ date, event, info }) => {
-  const formarted = moment(date).format("dddd");
+const Event = ({ date, event }) => {
+  const day = moment(date).format("dddd");
   return (
     <div className="col-1-of-4 mb-sm">
       <div className="feature-box">
-        {/* <i className={icon}></i> */}
-        <h2>{formarted}</h2>
+        <FaCalendarAlt className="feature-box__icon" />
+        <h2>{day}</h2>
         <h3 className="heading-tertiary mb-sm"> {date}</h3>
-        <h4>Events</h4>
-        {event.map((e) => (
-          <ul>
-            <li className="mb-sm">
-              <strong>Type: </strong>
-              {e.type} <br></br> <strong>Name: </strong>
-              {e.name}
-            </li>
-          </ul>
-        ))}
+        {event.length ? (
+          <>
+            <h4>Event(s)</h4>
+            {event.map((e, index) => (
+              <ul key={index}>
+                <li className="mb-sm">
+                  <strong>Type: </strong>
+                  {e.type} <br></br> <strong>Name: </strong>
+                  {e.name}
+                </li>
+              </ul>
+            ))}{" "}
+          </>
+        ) : (
+          <p className="feature-box__text">No event(s) on this date</p>
+        )}
       </div>
     </div>
   );

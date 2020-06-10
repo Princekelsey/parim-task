@@ -1,8 +1,7 @@
 import eventsActionTypes from "./eventsActionTypes";
 
-export const getAllEvents = (request) => ({
+export const getAllEvents = () => ({
   type: eventsActionTypes.FETCH_ALL_EVENTS_START,
-  payload: request,
 });
 
 export const getAllEventsSuccess = (events) => ({
