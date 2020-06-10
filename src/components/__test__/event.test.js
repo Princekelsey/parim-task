@@ -20,7 +20,7 @@ it("Event component renders without crashing", () => {
   );
 });
 
-it("renders calender correctly", () => {
+it("renders event correctly", () => {
   const { getByTestId } = render(
     <Provider store={store}>
       <Event date="2020-06-09" event={mockEvent} />
