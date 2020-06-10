@@ -37,7 +37,7 @@ const Calender = () => {
   const finalData = eventsList.length ? renderData() : [];
 
   return (
-    <section className="features-section">
+    <section className="features-section" data-testid="calender">
       <h1 className="heading-primary center-text">
         <span className="heading-primary--main">Events Pro</span>
         <span className="heading-primary--sub">events at a glance</span>
@@ -46,16 +46,14 @@ const Calender = () => {
         style={{ display: "flex", justifyContent: "space-around" }}
         className="mb-sm"
       >
-        <a
-          href="#!"
+        <button
           className="btn btn--white btn--animated"
           onClick={() => setIndex(0)}
         >
           <FaArrowLeft className="mr-sm" style={{ color: "#55c57a" }} />
           previous week
-        </a>
-        <a
-          href="#!"
+        </button>
+        <button
           className="btn btn--white btn--animated ml-sm"
           onClick={() => {
             if (currentIndex === 0) {
@@ -67,7 +65,7 @@ const Calender = () => {
         >
           next week
           <FaArrowRight className="ml-sm" style={{ color: "#55c57a" }} />
-        </a>
+        </button>
       </div>
       <div className="center-text mb-sm">
         <input
@@ -78,8 +76,7 @@ const Calender = () => {
           onChange={handleChange}
         />
         <label htmlFor="styled-checkbox-2">first day of the week</label>
-        <a
-          href="#!"
+        <button
           className="btn-text ml-sm"
           onClick={() => {
             setIndex(1);
@@ -87,7 +84,7 @@ const Calender = () => {
           }}
         >
           Reset
-        </a>
+        </button>
       </div>
       <div className="row">
         {eventsList.length ? (
@@ -105,7 +102,7 @@ const Calender = () => {
             )}{" "}
           </>
         ) : (
-          <h1 className="heading-primary center-text">>Fetching Data</h1>
+          <h1 className="heading-primary center-text">Fetching Data >>></h1>
         )}
       </div>
     </section>

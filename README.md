@@ -15,3 +15,7 @@ Installs all project dependencies
 ### `npm start`
 
 starts application in development mode.
+
+### `npm test`
+
+runs all the test.

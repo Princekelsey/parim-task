@@ -4,6 +4,7 @@ const moment = require("moment");
 export const formatReponseData = (reponseData, dates) => {
   const newData = getData(reponseData, dates);
 
+  // create chunk of 7 items (prevWeek, currentWeek and nexWeekt)
   const final = chunkArray(newData, 7);
 
   return final;

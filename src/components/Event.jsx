@@ -5,7 +5,7 @@ import { FaCalendarAlt } from "react-icons/fa";
 const Event = ({ date, event }) => {
   const day = moment(date).format("dddd");
   return (
-    <div className="col-1-of-4 mb-sm">
+    <div className="col-1-of-4 mb-sm" data-testid="event">
       <div className="feature-box">
         <FaCalendarAlt className="feature-box__icon" />
         <h2>{day}</h2>
